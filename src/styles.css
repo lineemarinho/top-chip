@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-lime-500 {
+  color: #afe52b !important;
+}
+
+.bg-lime-500 {
+  background-color: #afe52b !important;
+}
+.border-lime-500 {
+  border-color: #afe52b !important;
+}

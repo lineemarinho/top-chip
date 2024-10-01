@@ -10,8 +10,7 @@
         <a
           href="#"
           title=""
-          class="inline-flex items-center text-base font-medium text-gray-900 group"
-        >
+          class="inline-flex items-center text-base font-medium text-gray-900 group">
           Comprar fotos
           <svg
             class="w-5 h-5 ml-2 transition-all duration-200 transform group-hover:translate-x-1"
@@ -19,33 +18,28 @@
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            stroke-width="2"
-          >
+            stroke-width="2">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M13 7l5 5m0 0l-5 5m5-5H6"
-            />
+              d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
       </div>
     </div>
 
     <div
-      class="bg-gray-100 mt-8 p-4 rounded-full flex flex-wrap items-center gap-4"
-    >
+      class="bg-gray-100 mt-8 p-4 rounded-full flex flex-wrap items-center gap-4">
       <div class="flex items-center text-sm gap-2 flex-1">
         <input
           type="text"
           placeholder="Procurar eventos..."
-          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
-        />
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-lime-500 focus:border-lime-500 sm:text-sm caret-lime-500" />
       </div>
 
       <div class="flex items-center gap-2 flex-none">
         <select
-          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
-        >
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-lime-500 focus:border-lime-500 sm:text-sm caret-lime-500">
           <option value="" disabled selected>Selecione o Local</option>
 
           <option value="SaoPaulo">São Paulo</option>
@@ -56,15 +50,13 @@
 
       <div class="flex items-center gap-2 flex-none">
         <select
-          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
-        >
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-lime-500 focus:border-lime-500 sm:text-sm caret-lime-500">
           <option value="" disabled selected>Mês</option>
           <option value="01">Janeiro</option>
           <option value="02">Fevereiro</option>
         </select>
         <select
-          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
-        >
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-lime-500 focus:border-lime-500 sm:text-sm caret-lime-500">
           <option value="" disabled selected>Ano</option>
           <option value="01">2024</option>
           <option value="02">2023</option>
@@ -73,8 +65,7 @@
 
       <div class="flex items-center gap-2 flex-none">
         <select
-          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
-        >
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-lime-500 focus:border-lime-500 sm:text-sm caret-lime-500">
           <option value="" disabled selected>Organizador</option>
 
           <option value="organizador1">Organizador 1</option>
@@ -84,8 +75,7 @@
 
       <div class="flex-none">
         <button
-          class="bg-emerald-600 text-white px-6 py-2 font-bold text-sm rounded-full hover:bg-emerald-600 transition duration-300"
-        >
+          class="bg-lime-500 text-white px-6 py-2 font-bold text-sm rounded-full hover:bg-lime-500 transition duration-300">
           PROCURAR
         </button>
       </div>
@@ -93,17 +83,14 @@
     <div class="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-4">
       <div
         *ngFor="let photo of gallery"
-        class="relative overflow-hidden bg-gray-900 group rounded-xl"
-      >
+        class="relative overflow-hidden bg-gray-900 group rounded-xl">
         <a href="#" title="" class="block">
           <img class="object-cover w-full h-96" [src]="photo.img" alt="" />
         </a>
         <div
-          class="absolute inset-0 bg-gradient-to-t from-gray-900 group-hover:backdrop-blur-[2px] transition-all duration-200 via-gray-900/20 to-transparent"
-        ></div>
+          class="absolute inset-0 bg-gradient-to-t from-gray-900 group-hover:backdrop-blur-[2px] transition-all duration-200 via-gray-900/20 to-transparent"></div>
         <div
-          class="absolute transition-all duration-200 opacity-0 top-4 right-4 group-hover:opacity-100"
-        >
+          class="absolute transition-all duration-200 opacity-0 top-4 right-4 group-hover:opacity-100">
           <svg
             class="w-6 h-6 text-white"
             xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +99,7 @@
             stroke="currentColor"
             fill="none"
             stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+            stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <line x1="17" y1="7" x2="7" y2="17"></line>
             <polyline points="8 7 17 7 17 16"></polyline>
@@ -121,8 +107,7 @@
         </div>
         <div class="absolute inset-x-0 bottom-0 p-6">
           <div
-            class="transition-all duration-300 transform translate-y-1/2 group-hover:translate-y-0"
-          >
+            class="transition-all duration-300 transform translate-y-1/2 group-hover:translate-y-0">
             <p class="text-lg font-bold leading-tight text-white">
               <a href="#" title="" class="">
                 {{ photo.title }}

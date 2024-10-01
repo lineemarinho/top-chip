@@ -1,0 +1,145 @@
+<app-header></app-header>
+<section class="py-12 bg-white sm:py-16 lg:py-20">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <div class="sm:flex sm:items-center sm:justify-between sm:space-x-8">
+      <h2 class="text-3xl font-bold text-gray-900">
+        Veja suas fotos no Evento
+      </h2>
+
+      <div class="mt-6 sm:mt-0 sm:shrink-0">
+        <a
+          href="#"
+          title=""
+          class="inline-flex items-center text-base font-medium text-gray-900 group"
+        >
+          Comprar fotos
+          <svg
+            class="w-5 h-5 ml-2 transition-all duration-200 transform group-hover:translate-x-1"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="bg-gray-100 mt-8 p-4 rounded-full flex flex-wrap items-center gap-4"
+    >
+      <div class="flex items-center text-sm gap-2 flex-1">
+        <input
+          type="text"
+          placeholder="Procurar eventos..."
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        />
+      </div>
+
+      <div class="flex items-center gap-2 flex-none">
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Selecione o Local</option>
+
+          <option value="SaoPaulo">São Paulo</option>
+          <option value="RioDeJaneiro">Rio de Janeiro</option>
+          <option value="Curitiba">Curitiba</option>
+        </select>
+      </div>
+
+      <div class="flex items-center gap-2 flex-none">
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Mês</option>
+          <option value="01">Janeiro</option>
+          <option value="02">Fevereiro</option>
+        </select>
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Ano</option>
+          <option value="01">2024</option>
+          <option value="02">2023</option>
+        </select>
+      </div>
+
+      <div class="flex items-center gap-2 flex-none">
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Organizador</option>
+
+          <option value="organizador1">Organizador 1</option>
+          <option value="organizador2">Organizador 2</option>
+        </select>
+      </div>
+
+      <div class="flex-none">
+        <button
+          class="bg-emerald-600 text-white px-6 py-2 font-bold text-sm rounded-full hover:bg-emerald-600 transition duration-300"
+        >
+          PROCURAR
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div
+        *ngFor="let photo of gallery"
+        class="relative overflow-hidden bg-gray-900 group rounded-xl"
+      >
+        <a href="#" title="" class="block">
+          <img class="object-cover w-full h-96" [src]="photo.img" alt="" />
+        </a>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gray-900 group-hover:backdrop-blur-[2px] transition-all duration-200 via-gray-900/20 to-transparent"
+        ></div>
+        <div
+          class="absolute transition-all duration-200 opacity-0 top-4 right-4 group-hover:opacity-100"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <line x1="17" y1="7" x2="7" y2="17"></line>
+            <polyline points="8 7 17 7 17 16"></polyline>
+          </svg>
+        </div>
+        <div class="absolute inset-x-0 bottom-0 p-6">
+          <div
+            class="transition-all duration-300 transform translate-y-1/2 group-hover:translate-y-0"
+          >
+            <p class="text-lg font-bold leading-tight text-white">
+              <a href="#" title="" class="">
+                {{ photo.title }}
+                <span class="absolute inset-0" aria-hidden="true"></span>
+              </a>
+            </p>
+            <p class="mt-4 text-sm font-medium text-white/70">
+              {{ photo.date }}
+            </p>
+            <p class="mt-5 text-sm font-normal leading-6 text-white">
+              {{ photo.city }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

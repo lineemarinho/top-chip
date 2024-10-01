@@ -1,0 +1,247 @@
+<app-header></app-header>
+<section class="py-12 bg-white sm:py-16 lg:py-20">
+  <div class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <h1 class="text-2xl font-bold text-gray-900">
+          99ª CORRIDA INTERNACIONAL DE SÃO SILVESTRE
+        </h1>
+
+        <div class="divide-y divide-gray-200 -my-7 mt-8">
+          <div class="divide-y divide-gray-200 -my-7">
+            <div class="py-7">
+              <h2 class="text-base font-bold text-gray-900">
+                Informações Pessoais
+              </h2>
+              <div class="grid grid-cols-1 mt-6 sm:grid-cols-2 gap-y-5 gap-x-6">
+                <div>
+                  <label
+                    for="full-name"
+                    class="text-sm font-medium text-gray-600"
+                    >Nome Completo</label
+                  >
+                  <div class="mt-2">
+                    <input
+                      type="text"
+                      id="full-name"
+                      name="full-name"
+                      placeholder="Digite seu nome completo"
+                      class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="nickname"
+                    class="text-sm font-medium text-gray-600"
+                    >Apelido (opcional)</label
+                  >
+                  <div class="mt-2">
+                    <input
+                      type="text"
+                      id="nickname"
+                      name="nickname"
+                      placeholder="Nome para o número de peito"
+                      class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-7">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6">
+                <div>
+                  <label
+                    for="birth-date"
+                    class="text-sm font-medium text-gray-600"
+                    >Data de Nascimento</label
+                  >
+                  <div class="mt-2">
+                    <input
+                      type="date"
+                      id="birth-date"
+                      name="birth-date"
+                      class="block w-full px-4 py-3 text-sm font-normal text-gray-900 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="gender" class="text-sm font-medium text-gray-600"
+                    >Sexo</label
+                  >
+                  <div class="mt-2">
+                    <select
+                      id="gender"
+                      name="gender"
+                      class="block w-full px-4 py-3 text-sm font-normal text-gray-900 bg-white border border-gray-300 rounded-md focus:ring-gray-900 focus:border-gray-900"
+                    >
+                      <option value="" disabled selected>
+                        Selecione o sexo
+                      </option>
+                      <option value="feminino">Feminino</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-7">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6">
+                <div>
+                  <label for="ddd" class="text-sm font-medium text-gray-600"
+                    >DDD</label
+                  >
+                  <div class="mt-2">
+                    <input
+                      type="text"
+                      id="ddd"
+                      name="ddd"
+                      placeholder="Digite o DDD"
+                      class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="phone" class="text-sm font-medium text-gray-600"
+                    >Celular</label
+                  >
+                  <div class="mt-2">
+                    <input
+                      type="text"
+                      id="phone"
+                      name="phone"
+                      placeholder="Digite o número de celular"
+                      class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-7">
+              <div>
+                <label for="email" class="text-sm font-medium text-gray-600"
+                  >E-mail</label
+                >
+                <div class="mt-2">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    class="block w-full px-4 py-3 text-sm font-normal text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md caret-gray-900 focus:ring-gray-900 focus:border-gray-900"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="py-7">
+              <div>
+                <label
+                  for="subscription"
+                  class="text-sm font-medium text-gray-600"
+                  >Selecione sua opção de Inscrição</label
+                >
+                <div class="mt-2">
+                  <select
+                    id="subscription"
+                    name="subscription"
+                    class="block w-full px-4 py-3 text-sm font-normal text-gray-900 bg-white border border-gray-300 rounded-md focus:ring-gray-900 focus:border-gray-900"
+                  >
+                    <option value="" disabled selected>
+                      Escolha sua inscrição
+                    </option>
+                    <option value="night-run">NIGHT RUN</option>
+                    <option value="city-marathon">City Marathon</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-7">
+              <div>
+                <label for="kit" class="text-sm font-medium text-gray-600"
+                  >Selecione sua opção de Kit</label
+                >
+                <div class="mt-2">
+                  <select
+                    id="kit"
+                    name="kit"
+                    class="block w-full px-4 py-3 text-sm font-normal text-gray-900 bg-white border border-gray-300 rounded-md focus:ring-gray-900 focus:border-gray-900"
+                  >
+                    <option value="" disabled selected>Escolha o kit</option>
+                    <option value="camiseta-m">CAMISETA M - R$ 95.00</option>
+                    <option value="camiseta-l">CAMISETA L - R$ 95.00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 h-screen p-6 rounded-lg lg:top-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Resumo do Evento</h3>
+        <p class="text-base text-gray-700">
+          Participe da 99ª edição da corrida mais tradicional do Brasil! A
+          Corrida Internacional de São Silvestre acontecerá no dia 31 de
+          dezembro, no coração de São Paulo, reunindo corredores do mundo
+          inteiro.
+        </p>
+
+        <div class="mt-6">
+          <h4 class="text-lg font-semibold text-gray-800">Data e Local</h4>
+          <p class="text-sm text-gray-600 mt-1">
+            <strong>Data:</strong> 31 de Dezembro de 2024 <br />
+            <strong>Local:</strong> Avenida Paulista, São Paulo, SP
+          </p>
+        </div>
+
+        <div class="mt-6">
+          <h4 class="text-lg font-semibold text-gray-800">Distâncias</h4>
+          <p class="text-sm text-gray-600 mt-1">Corrida de 15 km</p>
+        </div>
+
+        <div class="mt-6">
+          <h4 class="text-lg font-semibold text-gray-800">
+            Valor da Inscrição
+          </h4>
+          <p class="text-sm text-gray-600 mt-1">R$ 95,00</p>
+        </div>
+
+        <div class="mt-6">
+          <h4 class="text-lg font-semibold text-gray-800">Benefícios</h4>
+          <ul class="list-disc list-inside text-sm text-gray-600 mt-1">
+            <li>Camiseta exclusiva do evento</li>
+            <li>Medalha para todos os participantes</li>
+            <li>Hidratação durante o percurso</li>
+          </ul>
+        </div>
+        <div class="mt-6">
+          <div class="flex mt-10 mb-10 items-center">
+            <input
+              type="checkbox"
+              id="terms"
+              name="terms"
+              class="w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-900 focus:ring-2"
+            />
+            <label for="terms" class="ml-2 text-sm font-medium text-gray-600">
+              Concordo com o regulamento.
+            </label>
+          </div>
+
+          <button
+            type="button"
+            class="inline-flex items-center justify-center w-full px-6 py-4 text-sm font-bold text-white transition-all duration-200 bg-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700"
+          >
+            Inscrever
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

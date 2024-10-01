@@ -1,0 +1,228 @@
+<header class="py-4 bg-white border-b border-gray-100 sm:py-5">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <div class="flex items-center justify-between">
+      <div class="shrink-0">
+        <a href="#" title="">
+          <img class="h-16" src="../../../assets/images/logo.png" />
+        </a>
+      </div>
+
+      <div
+        class="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-end lg:ml-auto"
+      >
+        <a
+          href="#"
+          title=""
+          class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+        >
+          Home
+        </a>
+
+        <a
+          href="/calendar"
+          title=""
+          class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+        >
+          Calendário
+        </a>
+
+        <a
+          href="/results"
+          title=""
+          class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+        >
+          Resultados
+        </a>
+
+        <a
+          href="/gallery"
+          title=""
+          class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+        >
+          Fotos
+        </a>
+        <a
+          href="/contact"
+          title=""
+          class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+        >
+          Contato
+        </a>
+        <a
+          href="/organizer"
+          title=""
+          class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+        >
+          Organizador
+        </a>
+      </div>
+
+      <div class="hidden gap-4 sm:flex sm:ml-auto lg:ml-4">
+        <a
+          href="/login"
+          title=""
+          class="inline-flex items-center border-emerald-600 justify-center px-6 py-2.5 text-base font-medium text-emerald-600 transition-all duration-200 bg-white border-2 rounded-full hover:bg-emerald-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-600"
+          role="button"
+        >
+          Login
+        </a>
+        <a
+          href="/create"
+          title=""
+          class="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium text-white transition-all duration-200 bg-emerald-600 border border-transparent rounded-full hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-600"
+          role="button"
+        >
+          Criar conta
+        </a>
+      </div>
+
+      <div class="flex ml-4 lg:hidden">
+        <button
+          (click)="toggleMenu()"
+          type="button"
+          class="inline-flex items-center p-2.5 text-white duration-200 bg-emerald-600 border border-transparent rounded-full hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-600"
+        >
+          <span *ngIf="!expanded" aria-hidden="true">
+            <svg
+              class="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </span>
+
+          <span *ngIf="expanded" aria-hidden="true">
+            <svg
+              class="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="expanded"
+    (click)="closeMenu()"
+    class="lg:hidden fixed top-0 left-0 w-full h-full bg-white z-50"
+  >
+    <div class="px-4 pt-5 pb-6 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="#" title="">
+          <img class="h-16" src="../../../assets/images/logo.png" />
+        </a>
+
+        <button
+          (click)="closeMenu()"
+          type="button"
+          class="p-2.5 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-200"
+        >
+          <svg
+            class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mt-6 space-y-6">
+        <div
+          class="grid lg:items-center lg:space-x-4 lg:justify-end lg:ml-auto"
+        >
+          <a
+            href="#"
+            title=""
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+          >
+            Home
+          </a>
+
+          <a
+            href="/calendar"
+            title=""
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+          >
+            Calendário
+          </a>
+
+          <a
+            href="/results"
+            title=""
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+          >
+            Resultados
+          </a>
+
+          <a
+            href="/gallery"
+            title=""
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+          >
+            Fotos
+          </a>
+          <a
+            href="/contact"
+            title=""
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+          >
+            Contato
+          </a>
+          <a
+            href="/organizer"
+            title=""
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+          >
+            Organizador
+          </a>
+        </div>
+
+        <div class="gap-4 grid">
+          <a
+            href="/login"
+            title=""
+            class="inline-flex items-center border-emerald-600 justify-center px-6 py-2.5 text-base font-medium text-emerald-600 transition-all duration-200 bg-white border-2 rounded-full hover:bg-emerald-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-600"
+            role="button"
+          >
+            Login
+          </a>
+          <a
+            href="/create"
+            title=""
+            class="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium text-white transition-all duration-200 bg-emerald-600 border border-transparent rounded-full hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-600"
+            role="button"
+          >
+            Criar conta
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

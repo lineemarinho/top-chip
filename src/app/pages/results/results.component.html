@@ -1,0 +1,74 @@
+<app-header></app-header>
+<section class="py-12 bg-white sm:py-10 lg:py-10">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div
+      class="text-center lg:items-center lg:justify-between lg:text-center lg:space-x-6"
+    >
+      <h2 class="block text-2xl font-bold text-gray-900">
+        Resultados dos eventos
+      </h2>
+      <div class="block text-sm font-regular text-gray-900">
+        Acompanhe o calendário de corridas de Imperatriz e região.
+      </div>
+    </div>
+
+    <div class="mt-12 sm:mt-12">
+      <div
+        class="grid grid-cols-1 gap-6 pt-4 pb-8 -mt-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
+        <div
+          *ngFor="let item of items"
+          class="relative w-full shadow-xl overflow-hidden bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1"
+        >
+          <div class="p-4">
+            <div class="overflow-hidden rounded-lg aspect-w-4 aspect-h-3">
+              <img class="object-cover w-full h-52" [src]="item.img" alt="" />
+            </div>
+
+            <p class="mt-4 text-base font-bold text-gray-900">
+              <a routerLink="/details" title="">
+                {{ item.title }}
+                <span class="absolute inset-0" aria-hidden="true"></span>
+              </a>
+            </p>
+            <p class="mt-1 text-sm font-medium text-green-500">
+              {{ item.status }}
+            </p>
+
+            <hr class="mt-4 border-gray-200" />
+            <div class="grid grid-cols-2 mt-4 gap-x-2">
+              <div>
+                <p
+                  class="text-xs font-medium tracking-wide text-gray-500 uppercase"
+                >
+                  Cidade
+                </p>
+                <p class="mt-1 text-sm font-bold text-gray-900">
+                  {{ item.city }}
+                </p>
+              </div>
+
+              <div>
+                <p
+                  class="text-xs font-medium tracking-wide text-gray-500 uppercase"
+                >
+                  Horário
+                </p>
+                <p class="mt-1 text-sm font-bold text-gray-900">
+                  {{ item.date }}
+                </p>
+              </div>
+            </div>
+            <hr class="mt-4 border-gray-100" />
+            <button
+              class="bg-white mt-4 w-full text-emerald-600 px-6 font-bold text-sm rounded-md hover:bg-emerald-600 transition duration-300"
+            >
+              Ver resultado
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer> </app-footer>

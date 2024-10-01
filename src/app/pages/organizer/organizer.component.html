@@ -1,0 +1,229 @@
+<header
+  class="py-4 bg-white border-b border-gray-100 sm:py-5"
+  x-data="{expanded: false}"
+>
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <div class="flex items-center justify-between">
+      <div class="shrink-0 flex-1 flex justify-center">
+        <a href="#" title="">
+          <img
+            class="h-20"
+            src="https://mindfire.com.br/wp-content/uploads/2022/11/Itau-power-shopping.webp"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="relative grid grid-cols-1 gap-5 md:gap-6">
+  <div class="overflow-hidden bg-gray-400 aspect-w-16 aspect-h-9 relative">
+    <img
+      class="object-cover w-full h-[550px]"
+      src="https://gooutside.com.br/wp-content/uploads/sites/3/2022/09/Chapada-dos-Veadeiros-1.jpg"
+      alt=""
+    />
+
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-center space-y-6"
+    >
+      <h2 class="text-white text-3xl font-bold mb-0">
+        2025 Itaú BBA IRONMAN Brasil
+      </h2>
+      <h2 class="text-white text-xl font-regular mb-4">
+        24 de dezembro 2024 às 16:00
+      </h2>
+
+      <button
+        type="button"
+        routerLink="/enrollment"
+        class="flex items-center w-96 justify-center px-4 py-3 text-base font-bold text-center text-white transition-all duration-200 bg-emerald-600 border-2 border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700"
+      >
+        Inscreva-se
+      </button>
+
+      <div id="countdown-timer" class="flex space-x-4 text-center">
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-emerald-600 bg-opacity-50 text-white text-4xl font-bold w-16 h-16 flex items-center justify-center rounded-lg"
+          >
+            <span id="days">16</span>
+          </div>
+          <span class="mt-2 text-sm text-white">Dias</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-emerald-600 bg-opacity-50 text-white text-4xl font-bold w-16 h-16 flex items-center justify-center rounded-lg"
+          >
+            <span id="hours">20</span>
+          </div>
+          <span class="mt-2 text-sm text-white">Horas</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-emerald-600 bg-opacity-50 text-white text-4xl font-bold w-16 h-16 flex items-center justify-center rounded-lg"
+          >
+            <span id="minutes">15</span>
+          </div>
+          <span class="mt-2 text-sm text-white">Minutos</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-emerald-600 bg-opacity-50 text-white text-4xl font-bold w-16 h-16 flex items-center justify-center rounded-lg"
+          >
+            <span id="seconds">25</span>
+          </div>
+          <span class="mt-2 text-sm text-white">Segundos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="py-12 bg-white sm:py-10 lg:py-10">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div
+      class="text-center lg:items-center lg:justify-between lg:text-center lg:space-x-6"
+    >
+      <h2 class="block text-2xl font-bold text-gray-900">Próximos eventos</h2>
+      <div class="block text-sm font-regular text-gray-900">
+        Acompanhe o calendário de corridas de Imperatriz e região.
+      </div>
+    </div>
+    <section class="py-4 w-full mt-6">
+      <div class="px-0 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="flex flex-wrap justify-center gap-6 sm:gap-14">
+          <div
+            *ngFor="let category of categories"
+            (click)="selectCategory(category.name)"
+            class="flex flex-col items-center justify-center cursor-pointer"
+          >
+            <div
+              [ngClass]="{
+                'border-2 border-emerald-600 p-2':
+                  selectedCategory === category.name
+              }"
+              class="w-12 h-12 rounded-full flex items-center justify-center bg-gray-200"
+            >
+              <i [ngClass]="category.icon" class="text-xl"></i>
+            </div>
+
+            <p class="mt-2 text-sm font-medium text-gray-700">
+              {{ category.name }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-gray-100 p-4 rounded-full flex flex-wrap items-center gap-4">
+      <div class="flex items-center text-sm gap-2 flex-1">
+        <input
+          type="text"
+          placeholder="Procurar eventos..."
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        />
+      </div>
+
+      <div class="flex items-center gap-2 flex-none">
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Selecione o Local</option>
+
+          <option value="SaoPaulo">São Paulo</option>
+          <option value="RioDeJaneiro">Rio de Janeiro</option>
+          <option value="Curitiba">Curitiba</option>
+        </select>
+      </div>
+
+      <div class="flex items-center gap-2 flex-none">
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Mês</option>
+          <option value="01">Janeiro</option>
+          <option value="02">Fevereiro</option>
+        </select>
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Ano</option>
+          <option value="01">2024</option>
+          <option value="02">2023</option>
+        </select>
+      </div>
+
+      <div class="flex items-center gap-2 flex-none">
+        <select
+          class="border block w-full px-4 py-3 placeholder-gray-500 border-gray-300 rounded-lg focus:ring-emerald-600 focus:border-emerald-600 sm:text-sm caret-emerald-600"
+        >
+          <option value="" disabled selected>Organizador</option>
+
+          <option value="organizador1">Organizador 1</option>
+          <option value="organizador2">Organizador 2</option>
+        </select>
+      </div>
+
+      <div class="flex-none">
+        <button
+          class="bg-emerald-600 text-white px-6 py-2 font-bold text-sm rounded-full hover:bg-emerald-600 transition duration-300"
+        >
+          PROCURAR
+        </button>
+      </div>
+    </div>
+    <div class="mt-12 sm:mt-6">
+      <div
+        class="grid grid-cols-1 gap-6 pt-4 pb-8 -mt-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
+        <div
+          *ngFor="let item of items"
+          class="relative w-full shadow-xl overflow-hidden bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1"
+        >
+          <div class="p-4">
+            <div class="overflow-hidden rounded-lg aspect-w-4 aspect-h-3">
+              <img class="object-cover w-full h-full" [src]="item.img" alt="" />
+            </div>
+
+            <p class="mt-4 text-base font-bold text-gray-900">
+              <a routerLink="/details" title="">
+                {{ item.title }}
+                <span class="absolute inset-0" aria-hidden="true"></span>
+              </a>
+            </p>
+            <p class="mt-1 text-sm font-medium text-green-500">
+              {{ item.status }}
+            </p>
+
+            <hr class="mt-4 border-gray-200" />
+            <div class="grid grid-cols-2 mt-4 gap-x-2">
+              <div>
+                <p
+                  class="text-xs font-medium tracking-wide text-gray-500 uppercase"
+                >
+                  Cidade
+                </p>
+                <p class="mt-1 text-sm font-bold text-gray-900">
+                  {{ item.city }}
+                </p>
+              </div>
+
+              <div>
+                <p
+                  class="text-xs font-medium tracking-wide text-gray-500 uppercase"
+                >
+                  Horário
+                </p>
+                <p class="mt-1 text-sm font-bold text-gray-900">
+                  {{ item.date }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer> </app-footer>
